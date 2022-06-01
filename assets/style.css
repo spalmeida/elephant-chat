@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+*
+.action-elephant-chat a
+{
+	color: #000;
+	text-decoration: none;  
+	list-style: none !important;
+}
+.button-img{
+	background-image: url(img/newtinha.webp) !important; /* The image used */
+	background-position: center !important; /* Center the image */
+	background-repeat: no-repeat !important; /* Do not repeat the image */
+	background-size: cover !important; /* Resize the background image to cover the entire container */
+}
+.action-elephant-chat
+{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+	z-index: 999;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+.action-elephant-chat li i{
+	color:  #004479	;
+	font-size: 20px;
+	padding-right:  10px;
+}
+.action-elephant-chat span
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(0,0,0,0.5); /* ALTERE AQUI A COR DO ÍCONE DO BOTÃO */
+	font-size: 2em;
+	transition: 0.6s ease-in-out;
+}
+.action-elephant-chat.active span
+{
+	transform: rotate(720deg);
+}
+.action-elephant-chat ul
+{
+	position: absolute;
+	bottom: 55px;
+	right: 10px;
+	background: #fff;
+	min-width: 150px;
+	padding: 20px;
+	border-radius: 20px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+	list-style: none !important;
+}
+.action-elephant-chat.active ul
+{
+	bottom: 65px;
+	opacity: 1;
+	visibility: visible;
+	transition: 0.3s;
+	background-color: #fff;
+	min-width: 270px;
+	border: solid 2px #bdc3c7;
+	border-radius: 10px;
+	list-style: none !important;
+}
+.action-elephant-chat.active ul li
+{
+	list-style: none !important;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px 0;
+	transition: 0.3s;
+
+}
+.action-elephant-chat ul li:hover
+{
+	font-weight: 600;
+	list-style: none !important;
+
+}
+.action-elephant-chat ul li:not(:last-child)
+{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.action-elephant-chat ul li img
+{
+	margin-right: 10px;
+	opacity: 0.2;
+	transform: scale(0.8em);
+}
+.action-elephant-chat ul li:hover img
+{
+	opacity: 0.8;
+}
+
+.msg-elephant-chat
+{
+	position: fixed;
+	bottom: 50px;
+	right: 105px;
+	width: 200px;
+	height: 55px;
+	background: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+	visibility:hidden;
+	z-index: 999;
+}
+.msg-elephant-chat span
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #666;
+	font-size: 1em;
+	transition: 0.3s ease-in-out;
+}
+
+/* STYLE DO FRAME DO BLIP CHAT */
+#blip-chat-open-iframe {
+	display: none !important;
+}
+
+#blip-chat-container {
+	height: 100% !important;
+	bottom: 0 !important;
+	right: 0 !important;
+}
+
+#blip-chat-iframe {
+	
+	top: 0 !important;
+	right: -400px !important;
+	bottom: 0 !important;
+	height: 100% !important;
+	max-height: 100% !important;
+	transform: none !important;
+	opacity: 1 !important;
+	box-shadow: none !important;
+	transition: 0.5s !important;
+}
+
+#blip-chat-iframe.blip-chat-iframe-opened {
+	right: 0 !important;
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2) !important;
+}
